@@ -1,6 +1,7 @@
 <template>
-  <div class="bg-white w40 rounded-100 p-3 text-center rounded-full">
+  <div class="bg-white w40 rounded-100 p-3 text-center rounded-full flex gap-2 items-center justify-center">
     {{ button }}
+    <img :src="picture" alt=""> 
   </div>
 </template>
 
@@ -8,6 +9,7 @@
 export default {
     props: {
         button: String,
+        picture: String,
     }
 
 }

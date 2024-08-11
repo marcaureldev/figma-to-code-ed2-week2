@@ -27,6 +27,8 @@ module.exports = {
       },
       backgroundImage: {
         'hero-section': "url('/images/hero-section.svg')",
+        'tech-mens': "url('/images/tech-mens.svg')",
+        'abraham-george': "url('/images/abraham-george.svg')",
       },
       maxWidth: {
         '30': '30em',
@@ -35,6 +37,8 @@ module.exports = {
       },
       width:{
         '20': '20em',
+        '25': '25em',
+        '40': '40em',
       },
       height:{
         '30': '30em',

@@ -5,7 +5,7 @@
         </div>
 
         <div
-            class="mt-9 max-w-70 mx-5 lg:mx-auto bg-hero-section bg-center bg-cover h-25 sm:h-30 rounded-52 font-Archivo-Regular">
+            class="mt-9 max-w-70 mx-5 lg:mx-auto hero-section bg-hero-section bg-center bg-cover h-25 sm:h-30 rounded-52 font-Archivo-Regular">
             <div class="bg-black text-white bg-opacity-40 h-25 sm:h-30 rounded-52 flex justify-center items-center">
                 <div class="text-center space-y-8">
                     <div class="flex justify-center items-center gap-5">
@@ -33,8 +33,8 @@
             </div>
         </div>
 
-        <div class="max-w-70 mx-5 lg:mx-auto text-center mt-16">
-            <h1 class="font-Chillax-Semibold font-bold text-2xl mx-auto">
+        <div class="max-w-70 mx-5 lg:mx-auto hero-section text-center mt-16">
+            <h1 class="font-Chillax-Semibold font-bold text-2xl mx-auto mt-16">
                 Discover the latest trends in summer fashion. Shop now and refresh your wardrobe with our our stylish
                 summer shirts
             </h1>
@@ -52,11 +52,35 @@
             <div class="mt-9 grid grid-cols-2 lg:grid-cols-3 place-items-center gap-2 max-w-70 mx-auto product">
                 <TrendsCard v-for="(product, index) in 6" :key="index" />
             </div>
+
+            <div class="flex justify-center items-center">
+                <Button :button="more" style="background-color: transparent; color: black;"
+                    class="w-32 py-2 border border-black" />
+            </div>
         </div>
 
-        <div class="flex justify-center items-center">
-            <Button :button="more" style="background-color: transparent; color: black;"
-                class="w-32 py-2 border border-black" />
+        <div class="mt-16 max-w-70 mx-auto hero-section text-center">
+            <h1 class="uppercase text-2xl md:text-4xl font-Chillax-Semibold">Our Collection</h1>
+            <p class="font-Archivo-Regular text-dark-gray mx-5 ">
+                Our latest collection, where classic and contemporary styles
+                converge in perfect harmony.
+            </p>
+            <div class="flex flex-row justify-center gap-2 items-center mt-9 collection">
+                <div class="bg-tech-mens bg-center bg-cover w-25 sm:ml-5 rounded-24 h-30 relative">
+                    <Button :button="learn" picture="/icons/arrow.svg" style="background-color: white; color: black;"
+                        class="w-44 py-2 absolute bottom-2 right-20" />
+                </div>
+                <div
+                    class="bg-abraham-george bg-center bg-cover w-20 sm:w-40 sm:mr-5 rounded-24 h-30 flex justify-center items-center">
+                    <div class="space-y-2">
+                        <h1 class="uppercase font-Chillax-Bold text-4xl sm:text-5xl classic-text">Classic Men</h1>
+                        <p class="text-white font-Archivo-Regular font-medium sm:text-xl">
+                            We’re changing the way things get
+                            made
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </template>
@@ -70,7 +94,8 @@ export default {
             accessories: 'Accessories',
             featured: 'Featured',
             unisex: 'Unisex',
-            more: 'View More'
+            more: 'View More',
+            learn: 'LEARN MORE',
         }
     }
 
@@ -83,6 +108,23 @@ export default {
         display: grid;
         grid-template-columns: 1fr;
     }
+}
 
+@media (max-width: 540px) {
+    .collection {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1124px) {
+    .hero-section {
+        margin: 0px 10px;
+    }
+}
+
+.classic-text {
+    color: transparent;
+    -webkit-text-stroke: 2px white;
 }
 </style>
