@@ -65,8 +65,8 @@
                 Our latest collection, where classic and contemporary styles
                 converge in perfect harmony.
             </p>
-            <div class="flex flex-row justify-center gap-2 items-center mt-9 collection">
-                <div class="bg-tech-mens bg-center bg-cover w-25 sm:ml-5 rounded-24 h-30 relative">
+            <div class="flex flex-row justify-center gap-5 items-center mt-9 collection">
+                <div class="bg-tech-mens bg-center bg-cover w-20 sm:w-25 sm:ml-5 rounded-24 h-30 relative">
                     <Button :button="learn" picture="/icons/arrow.svg" style="background-color: white; color: black;"
                         class="w-44 py-2 absolute bottom-2 right-20" />
                 </div>
@@ -81,6 +81,10 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="mt-24 p-10 bg-black">
+            <Footer></Footer>
         </div>
     </section>
 </template>

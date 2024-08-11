@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white w40 rounded-100 p-3 text-center rounded-full flex gap-2 items-center justify-center">
+  <div class="bg-white rounded-100 p-3 text-center rounded-full flex gap-2 items-center justify-center">
     {{ button }}
     <img :src="picture" alt=""> 
   </div>
