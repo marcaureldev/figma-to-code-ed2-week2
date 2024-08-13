@@ -18,7 +18,7 @@
 
             <ul class="lg:flex text-center">
                 <li class="lg:mx-4 lg:my-0 my-6" v-for="(link, index) in navigationLeft" :key="index">
-                    <NuxtLink to="">
+                    <NuxtLink :to="link.link">
                         {{ link.name }}
                     </NuxtLink>
                 </li>
@@ -30,7 +30,7 @@
                 <li class="flex justify-center gap-2 items-center lg:mx-4 lg:my-0 my-6" v-for="(link, index) in navigationRigth"
                     :key="index">
                     <img :src="link.icon" alt="">
-                    <NuxtLink to="">
+                    <NuxtLink :to="link.link">
                         {{ link.name }}
                     </NuxtLink>
                 </li>
@@ -50,17 +50,17 @@ export default {
         let open = ref(false)
 
         let navigationLeft = [
-            { name: 'Men', link: '/' },
-            { name: 'Women', link: '/top-sales' },
-            { name: 'Kids', link: '/collections' },
-            { name: 'Collection', link: '/our-blog' },
+            { name: 'Men', link: '/men' },
+            { name: 'Women', link: '/women' },
+            { name: 'Kids', link: '/kids' },
+            { name: 'Collection', link: '/collection' },
         ];
 
         let navigationRigth = [
-            { name: 'Shop', link: '/' },
-            { name: 'About Us', link: '/top-sales' },
-            { name: 'Account', icon: '/icons/person-icon.svg', link: '/collections' },
-            { name: 'Cart', link: '/our-blog' },
+            { name: 'Shop', link: '/shop' },
+            { name: 'About Us', link: '/about' },
+            { name: 'Account', icon: '/icons/person-icon.svg', link: '/account' },
+            { name: 'Cart', link: '/cart' },
             { name: '', icon: '/icons/search-icon.svg' },
         ];
 
