@@ -12,5 +12,9 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+
+  modules: [
+    '@nuxtjs/tailwindcss',
+  ],
   compatibilityDate: '2024-08-07',
 })
