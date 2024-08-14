@@ -50,8 +50,8 @@
         <div class="max-w-70 mx-auto">
             <h1 class="text-4xl font-Chillax-Semibold font-bold">You may also like</h1>
             <div
-                class="mt-9 grid grid-cols-2 lg:grid-cols-3 place-items-center gap-8 md:max-w-45 lg:max-w-70 md:mx-auto product">
-                <TrendsCard v-for="(product, index) in 6" :key="index" />
+                class="mt-9">
+                <TrendsCard />
             </div>
         </div>
 

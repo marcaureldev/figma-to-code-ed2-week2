@@ -6,10 +6,13 @@
 
     <div class="max-w-70 mx-auto space-y-8 mt-9">
       <h1 class="text-center text-5xl font-bold font-Chillax-Semibold">Our Collection</h1>
+
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mx-10 md:mx-5">
-        <div v-for="collection in collections.collections.edges" :key="collection.node.id"
-          :style="{ backgroundImage: `url(${collection.node.image.url})` }" class="h-50 bg-cover bg-center p-2">
-          <p class="text-2xl font-bold capitalize">{{ collection.node.handle }}</p>
+        <div v-for="collection in collections.collections.edges" :key="collection.node.id" class="text-center">
+          <div :style="{ backgroundImage: `url(${collection.node.image?.url || ''})` }"
+            class="h-50 bg-cover bg-center p-2">
+          </div>
+          <p class="text-start text-2xl font-bold capitalize">{{ collection.node.handle }}</p>
         </div>
       </div>
     </div>
@@ -26,7 +29,6 @@ const { data: collections } = await useFetch('https://mock.shop/api?query=%7B%20
 })
 
 console.log(toRaw(collections.value))
-
 </script>
 
 <style>

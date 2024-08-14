@@ -31,8 +31,11 @@ module.exports = {
         'abraham-george': "url('/images/abraham-george.svg')",
       },
       maxWidth: {
+        '9': '9em',
+        '15': '15em',
         '30': '30em',
         '35': '35em',
+        '45': '45em',
         '70': '70em',
       },
       width:{

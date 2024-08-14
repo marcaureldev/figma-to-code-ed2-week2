@@ -4,7 +4,9 @@
         <div class="flex justify-between items-center lg:hidden">
             <img src="/icons/hambuger-menu.svg" alt="Hambuger open icon" v-if="!open" @click="menuOpen">
             <img src="/icons/hambuger-menu-close.svg" alt="Hambuger close icon" v-else @click="menuOpen">
-            <img src="/icons/logo.svg" alt="Company logo">
+            <NuxtLink to="/">
+                <img src="/icons/logo.svg" alt="Company logo">
+            </NuxtLink>
             <div class="flex gap-4 items-center">
                 <img src="/icons/search-icon.svg" alt="Search icon">
                 <img src="/icons/basket-icon.svg" alt="Basket icon">
@@ -24,11 +26,13 @@
                 </li>
             </ul>
 
-            <img src="/icons/logo.svg" alt="Company logo" class="hidden lg:block">
+            <NuxtLink to="/">
+                <img src="/icons/logo.svg" alt="Company logo" class="hidden lg:block">
+            </NuxtLink>
 
             <ul class="lg:flex">
-                <li class="flex justify-center gap-2 items-center lg:mx-4 lg:my-0 my-6" v-for="(link, index) in navigationRigth"
-                    :key="index">
+                <li class="flex justify-center gap-2 items-center lg:mx-4 lg:my-0 my-6"
+                    v-for="(link, index) in navigationRigth" :key="index">
                     <img :src="link.icon" alt="">
                     <NuxtLink :to="link.link">
                         {{ link.name }}

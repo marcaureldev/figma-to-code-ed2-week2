@@ -49,8 +49,8 @@
                         class=" py-2 border border-black" />
                 </div>
             </div>
-            <div class="mt-9 grid grid-cols-2 lg:grid-cols-3 place-items-center gap-8 md:max-w-45 lg:max-w-70 md:mx-auto product">
-                <TrendsCard v-for="(product, index) in 6" :key="index" />
+            <div class="mt-9  product">
+                <TrendsCard />
             </div>
 
             <div class="flex justify-center items-center">
