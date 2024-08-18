@@ -31,8 +31,13 @@
                             class="py-2 w-12 border border-black" />
                     </div>
                     <div class="flex gap-5 items-center mt-4">
-                        <Button :button="buy" style="background-color: black; color: white;" class="py-2" />
-                        <Button :button="add" style="background-color: transparent;" class="py-2 border border-black" />
+                        <NuxtLink to="/checkout">
+                            <Button :button="buy" style="background-color: black; color: white;" class="py-2" />
+                        </NuxtLink>
+                        <NuxtLink to="/cart">
+                            <Button :button="add" style="background-color: transparent;"
+                                class="py-2 border border-black" />
+                        </NuxtLink>
                     </div>
                 </div>
                 <div class="">
@@ -49,8 +54,7 @@
 
         <div class="max-w-70 mx-auto">
             <h1 class="text-4xl font-Chillax-Semibold font-bold">You may also like</h1>
-            <div
-                class="mt-9">
+            <div class="mt-9">
                 <TrendsCard />
             </div>
         </div>
