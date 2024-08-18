@@ -2,7 +2,7 @@
     <div class="font-Archivo-Semibold uppercase md:text-xl text-start lg:mx-auto rounded-24 space-y-4">
         <div v-if="products"
             class="grid grid-cols-2 lg:grid-cols-3 place-items-center gap-8 md:max-w-45 lg:max-w-70 md:mx-auto product">
-            <div v-for="(product, index) in products.products.edges.slice(0, 6)" :key="index" class="space-y-2">
+            <div v-for="(product, index) in products.products.edges.slice(7, 13)" :key="index" class="space-y-2">
 
                 <div class="h-50 w-72 rounded-24 bg-cover bg-center relative block group"
                     :style="{ backgroundImage: `url(${product.node.featuredImage?.url || ''})` }">
